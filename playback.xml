@@ -549,20 +549,20 @@
     <programme channel="CCTV5+体育赛事" start="20251001100000 +0800" stop="20251001113000 +0800">
         <title lang="zh">实况录像-2025年世界男排锦标赛 三四名决赛</title>
     </programme>
-    <programme channel="CCTV5+体育赛事" start="20251001113000 +0800" stop="20251001130500 +0800">
+    <programme channel="CCTV5+体育赛事" start="20251001113000 +0800" stop="20251001131500 +0800">
         <title lang="zh">2025年中国网球公开赛-男双决赛</title>
     </programme>
-    <programme channel="CCTV5+体育赛事" start="20251001130500 +0800" stop="20251001143500 +0800">
+    <programme channel="CCTV5+体育赛事" start="20251001131500 +0800" stop="20251001142000 +0800">
+        <title lang="zh">实况录像-2025年世界田径锦标赛 3</title>
+    </programme>
+    <programme channel="CCTV5+体育赛事" start="20251001142000 +0800" stop="20251001153500 +0800">
+        <title lang="zh">WTT大满贯中国站-女单第二轮等</title>
+    </programme>
+    <programme channel="CCTV5+体育赛事" start="20251001153500 +0800" stop="20251001170500 +0800">
         <title lang="zh">2025/2026西班牙足球甲级联赛- 第7轮（马德里竞技—皇家马德里）</title>
     </programme>
-    <programme channel="CCTV5+体育赛事" start="20251001143500 +0800" stop="20251001160500 +0800">
-        <title lang="zh">实况录像-2025年国际滑联花样滑冰奥运资格赛 双人自由滑</title>
-    </programme>
-    <programme channel="CCTV5+体育赛事" start="20251001160500 +0800" stop="20251001170500 +0800">
-        <title lang="zh">2025年世界泳联高台跳水世界杯-意大利站</title>
-    </programme>
     <programme channel="CCTV5+体育赛事" start="20251001170500 +0800" stop="20251001183200 +0800">
-        <title lang="zh">实况录像-2025年世界田径锦标赛 3</title>
+        <title lang="zh">2025年世界泳联高台跳水世界杯-意大利站</title>
     </programme>
     <programme channel="CCTV5+体育赛事" start="20251001183200 +0800" stop="20251001190000 +0800">
         <title lang="zh">2025/2026西班牙足球甲级联赛-第7轮集锦</title>

@@ -10905,7 +10905,7 @@
     <channel id="钱塘江">
         <display-name lang="zh">钱塘江</display-name>
     </channel>
-    <programme channel="钱塘江" start="20251002000000 +0800" stop="20251002235900 +0800">
-        <title lang="zh"></title>
+    <programme channel="钱塘江" start="20251002000000 +0800" stop="20251003000000 +0800">
+        <title lang="zh">欢迎收看钱塘江风景</title>
     </programme>
 </tv>

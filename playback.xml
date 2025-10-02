@@ -76,7 +76,7 @@
         <title lang="zh">秘境之眼-2025-272</title>
     </programme>
     <programme channel="CCTV1综合" start="20251002173135 +0800" stop="20251002190000 +0800">
-        <title lang="zh">中国梦·家国情——2025国庆特别节目-1</title>
+        <title lang="zh">中国梦·家国情——2025国庆特别节目-完整版</title>
     </programme>
     <programme channel="CCTV1综合" start="20251002190000 +0800" stop="20251002194035 +0800">
         <title lang="zh">新闻联播</title>
@@ -3759,8 +3759,11 @@
     <programme channel="24小时城市联赛轮播台" start="20251002193100 +0800" stop="20251002220000 +0800">
         <title lang="zh">江苏省城市足球联赛第13轮全场回放：无锡队1:1南通队</title>
     </programme>
-    <programme channel="24小时城市联赛轮播台" start="20251002220000 +0800" stop="20251003004400 +0800">
-        <title lang="zh">四川省城市足球联赛第1轮全场回放：甘孜0:2德阳</title>
+    <programme channel="24小时城市联赛轮播台" start="20251002220000 +0800" stop="20251002230900 +0800">
+        <title lang="zh">河南省女子排球城市联赛豫南赛区第9轮回放：信阳0:3平顶山</title>
+    </programme>
+    <programme channel="24小时城市联赛轮播台" start="20251002230900 +0800" stop="20251003005500 +0800">
+        <title lang="zh">广东省足球超级联赛第4轮全场回放：深圳藝品高9:1珠海聚杰</title>
     </programme>
     <channel id="武术世界">
         <display-name lang="zh">武术世界</display-name>

@@ -486,10 +486,10 @@
     <programme channel="CCTV5体育" start="20251002173000 +0800" stop="20251002180000 +0800">
         <title lang="zh">体育新闻</title>
     </programme>
-    <programme channel="CCTV5体育" start="20251002180000 +0800" stop="20251002200000 +0800">
+    <programme channel="CCTV5体育" start="20251002180000 +0800" stop="20251002210000 +0800">
         <title lang="zh">2025年中国网球公开赛-女单1/4决赛2</title>
     </programme>
-    <programme channel="CCTV5体育" start="20251002200000 +0800" stop="20251002220000 +0800">
+    <programme channel="CCTV5体育" start="20251002210000 +0800" stop="20251002220000 +0800">
         <title lang="zh">WTT大满贯中国站-混双半决赛2等</title>
     </programme>
     <programme channel="CCTV5体育" start="20251002220000 +0800" stop="20251002223500 +0800">
@@ -543,10 +543,10 @@
     <programme channel="CCTV5+体育赛事" start="20251002163200 +0800" stop="20251002180000 +0800">
         <title lang="zh">实况录像-2025年世界田径锦标赛 4</title>
     </programme>
-    <programme channel="CCTV5+体育赛事" start="20251002180000 +0800" stop="20251002200000 +0800">
+    <programme channel="CCTV5+体育赛事" start="20251002180000 +0800" stop="20251002210000 +0800">
         <title lang="zh">WTT大满贯中国站-女双1/4决赛等</title>
     </programme>
-    <programme channel="CCTV5+体育赛事" start="20251002200000 +0800" stop="20251002220500 +0800">
+    <programme channel="CCTV5+体育赛事" start="20251002210000 +0800" stop="20251002220500 +0800">
         <title lang="zh">2025年中国网球公开赛-女双1/4决赛2</title>
     </programme>
     <programme channel="CCTV5+体育赛事" start="20251002220500 +0800" stop="20251002233500 +0800">

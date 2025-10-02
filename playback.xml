@@ -1221,22 +1221,19 @@
     <programme channel="CCTV13新闻" start="20251002013700 +0800" stop="20251002020000 +0800">
         <title lang="zh">法治在线</title>
     </programme>
-    <programme channel="CCTV13新闻" start="20251002020000 +0800" stop="20251002022500 +0800">
+    <programme channel="CCTV13新闻" start="20251002020000 +0800" stop="20251002022550 +0800">
         <title lang="zh">新闻直播间</title>
     </programme>
-    <programme channel="CCTV13新闻" start="20251002022500 +0800" stop="20251002030000 +0800">
+    <programme channel="CCTV13新闻" start="20251002022550 +0800" stop="20251002030000 +0800">
         <title lang="zh">2025吾家吾国-11</title>
     </programme>
-    <programme channel="CCTV13新闻" start="20251002030000 +0800" stop="20251002034400 +0800">
+    <programme channel="CCTV13新闻" start="20251002030000 +0800" stop="20251002040000 +0800">
         <title lang="zh">新闻直播间</title>
     </programme>
-    <programme channel="CCTV13新闻" start="20251002034400 +0800" stop="20251002040000 +0800">
-        <title lang="zh">焦点访谈</title>
-    </programme>
-    <programme channel="CCTV13新闻" start="20251002040000 +0800" stop="20251002042500 +0800">
+    <programme channel="CCTV13新闻" start="20251002040000 +0800" stop="20251002042550 +0800">
         <title lang="zh">新闻直播间</title>
     </programme>
-    <programme channel="CCTV13新闻" start="20251002042500 +0800" stop="20251002050000 +0800">
+    <programme channel="CCTV13新闻" start="20251002042550 +0800" stop="20251002050000 +0800">
         <title lang="zh">2025吾家吾国-11</title>
     </programme>
     <programme channel="CCTV13新闻" start="20251002050000 +0800" stop="20251002051800 +0800">
@@ -1299,16 +1296,16 @@
     <programme channel="CCTV13新闻" start="20251002210000 +0800" stop="20251002213000 +0800">
         <title lang="zh">新闻联播</title>
     </programme>
-    <programme channel="CCTV13新闻" start="20251002213000 +0800" stop="20251002220500 +0800">
+    <programme channel="CCTV13新闻" start="20251002213000 +0800" stop="20251002222000 +0800">
+        <title lang="zh">新闻直播间</title>
+    </programme>
+    <programme channel="CCTV13新闻" start="20251002222000 +0800" stop="20251002225400 +0800">
         <title lang="zh">2025吾家吾国-12</title>
     </programme>
-    <programme channel="CCTV13新闻" start="20251002220500 +0800" stop="20251002223000 +0800">
+    <programme channel="CCTV13新闻" start="20251002225400 +0800" stop="20251002233000 +0800">
         <title lang="zh">国际时讯</title>
     </programme>
-    <programme channel="CCTV13新闻" start="20251002223000 +0800" stop="20251002230000 +0800">
-        <title lang="zh">环球视线</title>
-    </programme>
-    <programme channel="CCTV13新闻" start="20251002230000 +0800" stop="20251002235900 +0800">
+    <programme channel="CCTV13新闻" start="20251002233000 +0800" stop="20251002235900 +0800">
         <title lang="zh">24小时</title>
     </programme>
     <channel id="CCTV14少儿">
@@ -4071,11 +4068,8 @@
     <programme channel="江苏卫视" start="20251002190000 +0800" stop="20251002193600 +0800">
         <title lang="zh">新闻联播</title>
     </programme>
-    <programme channel="江苏卫视" start="20251002193600 +0800" stop="20251002203100 +0800">
-        <title lang="zh">围猎（11）</title>
-    </programme>
-    <programme channel="江苏卫视" start="20251002203100 +0800" stop="20251002212200 +0800">
-        <title lang="zh">围猎（12）</title>
+    <programme channel="江苏卫视" start="20251002193600 +0800" stop="20251002212200 +0800">
+        <title lang="zh">围猎11-12</title>
     </programme>
     <programme channel="江苏卫视" start="20251002212200 +0800" stop="20251002215500 +0800">
         <title lang="zh">江苏超会玩国庆特别节目</title>

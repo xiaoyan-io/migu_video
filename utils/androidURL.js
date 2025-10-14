@@ -2,6 +2,7 @@ import axios from "axios";
 import { getStringMD5 } from "./EncryUtils.js";
 import { getddCalcuURL, getddCalcuURL720p, getEncryptURL } from "./ddCalcuURL.js";
 import { changedDdCalcu } from "./datas.js";
+import { printYellow } from "./colorOut.js";
 
 function getSaltAndSign(md5) {
 
@@ -57,12 +58,11 @@ function replaceChars(url, pid, rateType) {
   }
 
   // 替换
-  let suffixSplit = suffix.split("")
   for (let i = 0; i < index.length; i++) {
-    suffixSplit[index[i] - 1] = defaultChange[i]
+    suffix[index[i] - 1] = defaultChange[i]
   }
 
-  return `${prefix}&ddCalcu=${suffixSplit.join("")}`
+  return `${prefix}&ddCalcu=${suffix}`
 }
 
 async function getAndroidVideoURL(userId, token, exports, pid, rateType) {
@@ -138,6 +138,7 @@ async function getAndroidVideoURL(userId, token, exports, pid, rateType) {
  * @returns {} - url: 链接 rateType: 清晰度
  */
 async function getAndroidURL(userId, token, pid, rateType) {
+
   if (rateType <= 1) {
     return {
       url: "",
@@ -152,7 +153,13 @@ async function getAndroidURL(userId, token, pid, rateType) {
     TerminalId: "android",
     "X-UP-CLIENT-CHANNEL-ID": "2600037000-99000-200300220100002"
   }
-  if (rateType != 2) {
+
+  // 广东卫视有些特殊
+  if (pid == "608831231") {
+    rateType = 2
+  }
+
+  if (rateType != 2 && userId != "" && token != "") {
     headers.UserId = userId
     headers.UserToken = token
   }
@@ -163,12 +170,23 @@ async function getAndroidURL(userId, token, pid, rateType) {
 
   // 请求
   const baseURL = "https://play.miguvideo.com/playurl/v1/play/playurl"
-  const params = "?sign=" + result.sign + "&rateType=" + rateType
+  let params = "?sign=" + result.sign + "&rateType=" + rateType
     + "&contId=" + pid + "&timestamp=" + timestramp + "&salt=" + result.salt
-  const respData = await axios.get(baseURL + params, {
+  let respData = await axios.get(baseURL + params, {
     headers: headers
   }).then(r => r.data)
 
+  if (respData.rid == 'TIPS_NEED_MEMBER') {
+    printYellow("该账号没有会员 正在降低画质")
+
+    params = "?sign=" + result.sign + "&rateType=" + (rateType - 1)
+      + "&contId=" + pid + "&timestamp=" + timestramp + "&salt=" + result.salt
+    respData = await axios.get(baseURL + params, {
+      headers: headers
+    }).then(r => r.data)
+  }
+
+  // console.dir(respData, { depth: null })
   // console.log(respData)
   const url = respData.body.urlInfo?.url
   // console.log(rateType)
@@ -180,10 +198,11 @@ async function getAndroidURL(userId, token, pid, rateType) {
     }
   }
 
-  rateType = respData.body.urlInfo?.rateType
-
   // 将URL加密
   const resURL = getddCalcuURL(url, pid, "android", rateType)
+
+  rateType = respData.body.urlInfo?.rateType
+  // console.log("清晰度" + rateType)
 
   return {
     url: resURL,
@@ -239,12 +258,14 @@ async function getAndroidURL720p(pid) {
     }
   }
 
+  rateType = respData.body.urlInfo?.rateType
+
   // 将URL加密
   const resURL = getddCalcuURL720p(url, pid)
 
   return {
     url: resURL,
-    rateType: 3
+    rateType: parseInt(rateType)
   }
 
 }

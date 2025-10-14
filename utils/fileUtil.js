@@ -1,4 +1,4 @@
-import fs from "fs"
+import fs from "node:fs"
 function createFile(filePath) {
   if (!fs.existsSync(filePath)) {
     writeFile(filePath, "")
@@ -29,4 +29,16 @@ function appendFileSync(filePath, content) {
   })
 }
 
-export { createFile, writeFile, appendFile, appendFileSync }
+function readFileSync(filePath) {
+  return fs.readFileSync(filePath)
+}
+
+function renameFileSync(oldFilePath, newFilePath) {
+  fs.renameSync(oldFilePath, newFilePath, err => {
+    if (err) {
+      throw new Error(`文件重命名失败${oldFilePath} -> ${newFilePath}`)
+    }
+  })
+}
+
+export { createFile, writeFile, appendFile, appendFileSync, readFileSync, renameFileSync }

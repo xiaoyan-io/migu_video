@@ -1,3 +1,4 @@
+import { userId } from "../config.js"
 import { getDateString } from "./time.js"
 
 const list = {
@@ -6,7 +7,7 @@ const list = {
     // 第11位字符
     "keys": "yzwxcdabgh",
     // 第5 8 14位字母对应下标0 1 3的字符
-    "words": ['z', 'y', '0', 'w'],
+    "words": ['', 'y', '0', 'w'],
     // 第11位字符替换位置,从0开始
     "thirdReplaceIndex": 1,
     // 加密后链接后缀
@@ -14,7 +15,7 @@ const list = {
   },
   "android": {
     "keys": "cdabyzwxkl",
-    "words": ['x', 'a', '0', 'a'],
+    "words": ['v', 'a', '0', 'a'],
     "thirdReplaceIndex": 6,
     "suffix": "&sv=10004&ct=android"
   }
@@ -97,9 +98,14 @@ function getEncryptURL(exports, videoURL) {
 /**
  * h5端现已失效
  * 获取ddCalcu
- * 大致思路:把puData最后一个字符和第一个字符拼接，然后拼接倒数第二个跟第二个，一直循环，当第1 2 3 4次(从0开始)循环时需要插入特殊标识字符
- * 特殊字符:四个特殊字符位置是第5 8 11 14，第5 8 14是根据平台确定的，且各个节目都一样。第11位在h5上是根据节目ID第1位(从0开始,android是第6位)数字为下标的某字符串的值
- * 在android，标清画质还有区分，第5位字符需要修改，其他不变
+ * 大致思路:把puData最后一个字符和第一个字符拼接，然后拼接倒数第二个跟第二个，一直循环，
+ *     当第1 2 3 4次(从0开始)循环时需要插入特殊标识字符
+ * 特殊字符:
+ *     都是根据一些数字字符串的某一位的值对应某数组的值确定的，形如数组[数字字符串[第几位]],具体根据第几位每个版本都不一样
+ *     第1次是根据userid确定的，未登录时为固定字母
+ *     第2位是根据时间戳确定(需要yyyyMMddhhmmss格式)
+ *     第3根据节目id
+ *     第4是根据平台确定的
  * @param {string} puData - 服务器返回的那个东东
  * @param {string} programId - 节目ID
  * @param {string} clientType - 平台类型 h5 android
@@ -123,6 +129,16 @@ function getddCalcu(puData, programId, clientType, rateType) {
   if (rateType == null || rateType == undefined) {
     return ""
   }
+
+  // words第1位是根据userId的第7位(从0开始)数字对应keys里的字母生成的
+  // 不登录标清是默认v
+  const id = userId ? userId : process.env.USERID
+  if (id) {
+    const words1 = list.android.keys[id[7]]
+    list.android.words[0] = words1
+    list.h5.words[0] = words1
+  }
+
   let keys = list[clientType].keys
   let words = list[clientType].words
   const thirdReplaceIndex = list[clientType].thirdReplaceIndex
@@ -130,10 +146,7 @@ function getddCalcu(puData, programId, clientType, rateType) {
   if (clientType == "android" && rateType == "2") {
     words[0] = "v"
   }
-  puData = puData.split("");
-  keys = keys.split("")
   const puDataLength = puData.length
-  programId = programId.split("")
   let ddCalcu = []
   for (let i = 0; i < puDataLength / 2; i++) {
 
@@ -144,7 +157,7 @@ function getddCalcu(puData, programId, clientType, rateType) {
         ddCalcu.push(words[i - 1])
         break;
       case 2:
-        ddCalcu.push(words[i - 1])
+        ddCalcu.push(keys[parseInt(getDateString(new Date())[0])])
         break;
       case 3:
         ddCalcu.push(keys[programId[thirdReplaceIndex]])
@@ -207,31 +220,26 @@ function getddCalcu720p(puData, programId) {
     return ""
   }
 
-  const words = ["e", "2", "", "0"]
-  const thirdReplaceIndex = 2
+  const keys = "0123456789"
 
-  puData = puData.split("");
-  const keys = "0123456789".split("")
-  const puDataLength = puData.length
-
-  programId = programId.split("")
   let ddCalcu = []
-  for (let i = 0; i < puDataLength / 2; i++) {
+  for (let i = 0; i < puData.length / 2; i++) {
 
-    ddCalcu.push(puData[puDataLength - i - 1])
+    ddCalcu.push(puData[puData.length - i - 1])
     ddCalcu.push(puData[i])
     switch (i) {
       case 1:
-        ddCalcu.push(words[i - 1])
+        // ddCalcu.push(token=="" ?"e":keys[] )
+        ddCalcu.push("e")
         break;
       case 2:
         ddCalcu.push(keys[parseInt(getDateString(new Date())[6])])
         break;
       case 3:
-        ddCalcu.push(keys[programId[thirdReplaceIndex]])
+        ddCalcu.push(keys[programId[2]])
         break;
       case 4:
-        ddCalcu.push(words[i - 1])
+        ddCalcu.push("0")
         break;
     }
   }

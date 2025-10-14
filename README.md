@@ -1,6 +1,6 @@
-# migu_video
+# 使用方式
 
-账号🐔了。~只有标清..~ 高清为主😅 gitee仓库被改私有了..
+账号🐔了。~~只有标清..~~ 高清为主😅 gitee仓库被改私有了..
 
 访问地址(可回看当天内容)
 
@@ -14,6 +14,96 @@ https://develop202.github.io/migu_video/interface.txt
 
 ```
 https://gh-proxy.com/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt
+```
+
+# 本地部署
+
+使用node自带的http模块实现。
+
+> 注意事项
+>
+> 1. 登录后使用不保证安全，请谨慎使用
+> 1. 需要国内IP才可正常访问
+
+## 配置
+
+配置信息如下，默认仅本机可用
+
+| 变量名    | 默认值                  | 类型   | 介绍                                       |
+| --------- | ----------------------- | ------ | ------------------------------------------ |
+| muserId   |                         | string | 用户id，可在网页端登录获取                 |
+| mtoken    |                         | string | 用户token，可在网页端登录获取              |
+| mport     | 1234                    | number | 服务本地启动端口                           |
+| mhost     | <http://localhost:1234> | string | 访问地址，用于节目和epg地址生成            |
+| mrateType | 3                       | number | 画质 2:标清 3:高清 4:蓝光(需要登录且有VIP) |
+
+## node
+
+### 环境要求
+
+需要 NodeJS 15+ 环境
+
+### 安装
+
+```shell
+git clone git@github.com:develop202/migu_video.git
+cd migu_video
+npm i
+```
+
+### 运行
+
+```shell
+node app.js
+```
+
+若需要修改配置，可以使用以下命令
+Mac/Linux:
+
+```shell
+mport=3000 mhost="http://localhost:3000" node app.js
+```
+
+Windows下使用git-bash等终端:
+
+```shell
+set mport=3000 && set mhost="http://localhost:3000" && node app.js
+```
+
+Windows下使用PowerShell等终端:
+
+```shell
+$Env:mport=3000; $Env:mhost="http://localhost:3000"; node app.js
+```
+
+## docker
+
+初次使用，如有错误还请大佬指正。
+
+### 安装
+
+```shell
+docker pull develop767/migu_video:latest
+```
+
+### 运行
+
+```shell
+docker run -p 1234:1234 --name migu_video develop767/migu_video
+```
+
+若需要修改配置，可以使用以下命令
+
+```shell
+docker run -p 3000:3000 -e mport=3000 -e mhost="http://localhost:3000" --name migu_video develop767/migu_video
+```
+
+### 构建
+
+若需要手动构建镜像，可以使用以下命令
+
+```shell
+docker build -t migu_video .
 ```
 
 # 免责声明

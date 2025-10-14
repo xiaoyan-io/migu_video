@@ -5475,32 +5475,32 @@
     <channel id="上海新闻综合">
         <display-name lang="zh">上海新闻综合</display-name>
     </channel>
-    <programme channel="上海新闻综合" start="20251013232500 +0800" stop="20251014001500 +0800">
+    <programme channel="上海新闻综合" start="20251013232500 +0800" stop="20251014004700 +0800">
         <title lang="zh">33集连续剧：大江大河之岁月如歌（33）大结局</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014001500 +0800" stop="20251014005800 +0800">
+    <programme channel="上海新闻综合" start="20251014004700 +0800" stop="20251014012800 +0800">
         <title lang="zh">40集连续剧：白色城堡（1）</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014005800 +0800" stop="20251014014500 +0800">
+    <programme channel="上海新闻综合" start="20251014012800 +0800" stop="20251014020900 +0800">
         <title lang="zh">40集连续剧：白色城堡（2）</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014014500 +0800" stop="20251014022000 +0800">
-        <title lang="zh">40集连续剧：白色城堡（3）</title>
+    <programme channel="上海新闻综合" start="20251014020900 +0800" stop="20251014060000 +0800">
+        <title lang="zh">晚安上海</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014022000 +0800" stop="20251014060000 +0800">
-        <title lang="zh">（新）晚安上海</title>
+    <programme channel="上海新闻综合" start="20251014060000 +0800" stop="20251014060100 +0800">
+        <title lang="zh">早安上海</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014060000 +0800" stop="20251014063000 +0800">
-        <title lang="zh">中国考古报道</title>
+    <programme channel="上海新闻综合" start="20251014060100 +0800" stop="20251014063000 +0800">
+        <title lang="zh">中国考古报道(81)</title>
     </programme>
     <programme channel="上海新闻综合" start="20251014063000 +0800" stop="20251014070000 +0800">
-        <title lang="zh">寻味</title>
+        <title lang="zh">寻味(243)“水畔沪味”第四集：浦江筑味</title>
     </programme>
     <programme channel="上海新闻综合" start="20251014070000 +0800" stop="20251014085500 +0800">
         <title lang="zh">上海早晨</title>
     </programme>
     <programme channel="上海新闻综合" start="20251014085500 +0800" stop="20251014090500 +0800">
-        <title lang="zh">宣传片：好物</title>
+        <title lang="zh">好物齐刷刷</title>
     </programme>
     <programme channel="上海新闻综合" start="20251014090500 +0800" stop="20251014095000 +0800">
         <title lang="zh">46集连续剧：英雄烈（25）</title>
@@ -5518,27 +5518,27 @@
         <title lang="zh">午间30分</title>
     </programme>
     <programme channel="上海新闻综合" start="20251014123000 +0800" stop="20251014130000 +0800">
-        <title lang="zh">摩登厨房</title>
+        <title lang="zh">摩登厨房(77)</title>
     </programme>
     <programme channel="上海新闻综合" start="20251014130000 +0800" stop="20251014134800 +0800">
-        <title lang="zh">40集连续剧：白色城堡（4）</title>
+        <title lang="zh">40集连续剧：白色城堡（3）</title>
     </programme>
     <programme channel="上海新闻综合" start="20251014134800 +0800" stop="20251014143500 +0800">
+        <title lang="zh">40集连续剧：白色城堡（4）</title>
+    </programme>
+    <programme channel="上海新闻综合" start="20251014143500 +0800" stop="20251014152200 +0800">
         <title lang="zh">40集连续剧：白色城堡（5）</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014143500 +0800" stop="20251014152000 +0800">
+    <programme channel="上海新闻综合" start="20251014152200 +0800" stop="20251014160900 +0800">
         <title lang="zh">40集连续剧：白色城堡（6）</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014152000 +0800" stop="20251014161200 +0800">
-        <title lang="zh">40集连续剧：白色城堡（7）</title>
+    <programme channel="上海新闻综合" start="20251014160900 +0800" stop="20251014163000 +0800">
+        <title lang="zh">诗书画(289) 长江江苏</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014161200 +0800" stop="20251014162500 +0800">
-        <title lang="zh">《白色城堡》明日13：00多集连播</title>
+    <programme channel="上海新闻综合" start="20251014163000 +0800" stop="20251014170000 +0800">
+        <title lang="zh">中国考古报道(81)</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014162500 +0800" stop="20251014165500 +0800">
-        <title lang="zh">中国考古报道</title>
-    </programme>
-    <programme channel="上海新闻综合" start="20251014165500 +0800" stop="20251014172900 +0800">
+    <programme channel="上海新闻综合" start="20251014170000 +0800" stop="20251014172900 +0800">
         <title lang="zh">案件聚焦</title>
     </programme>
     <programme channel="上海新闻综合" start="20251014172900 +0800" stop="20251014183000 +0800">
@@ -5547,20 +5547,20 @@
     <programme channel="上海新闻综合" start="20251014183000 +0800" stop="20251014191500 +0800">
         <title lang="zh">新闻报道 新闻透视 观众中来 天气预报</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014191500 +0800" stop="20251014193800 +0800">
+    <programme channel="上海新闻综合" start="20251014191500 +0800" stop="20251014193700 +0800">
         <title lang="zh">东方110</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014193800 +0800" stop="20251014194800 +0800">
-        <title lang="zh">宣传片：好物</title>
+    <programme channel="上海新闻综合" start="20251014193700 +0800" stop="20251014194800 +0800">
+        <title lang="zh">好物齐刷刷</title>
     </programme>
     <programme channel="上海新闻综合" start="20251014194800 +0800" stop="20251014203200 +0800">
         <title lang="zh">36集连续剧：潜渊（2）</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014203200 +0800" stop="20251014211500 +0800">
+    <programme channel="上海新闻综合" start="20251014203200 +0800" stop="20251014211300 +0800">
         <title lang="zh">36集连续剧：潜渊（3）</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014211500 +0800" stop="20251014212600 +0800">
-        <title lang="zh">宣传片：好物</title>
+    <programme channel="上海新闻综合" start="20251014211300 +0800" stop="20251014212600 +0800">
+        <title lang="zh">好物齐刷刷</title>
     </programme>
     <programme channel="上海新闻综合" start="20251014212600 +0800" stop="20251014213000 +0800">
         <title lang="zh">《新闻夜线》天气预报</title>
@@ -5569,13 +5569,13 @@
         <title lang="zh">新闻夜线</title>
     </programme>
     <programme channel="上海新闻综合" start="20251014223000 +0800" stop="20251014230000 +0800">
-        <title lang="zh">海外路路通</title>
+        <title lang="zh">海外路路通(506) 达叔留学观察9：重构英美双申请+伦敦大学学院UCL</title>
     </programme>
     <programme channel="上海新闻综合" start="20251014230000 +0800" stop="20251014232500 +0800">
         <title lang="zh">东方110</title>
     </programme>
-    <programme channel="上海新闻综合" start="20251014232500 +0800" stop="20251015001500 +0800">
-        <title lang="zh">40集连续剧：白色城堡（4）</title>
+    <programme channel="上海新闻综合" start="20251014232500 +0800" stop="20251015000600 +0800">
+        <title lang="zh">40集连续剧：白色城堡（3）</title>
     </programme>
     <channel id="上视东方影视">
         <display-name lang="zh">上视东方影视</display-name>

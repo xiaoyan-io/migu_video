@@ -36,8 +36,12 @@ async function dataList() {
     let cates = await cateList()
 
     for (let cate in cates) {
-      const resp = await axios.get("https://program-sc.miguvideo.com/live/v2/tv-data/" + cates[cate].vomsID)
-      cates[cate].dataList = resp.data.body.dataList;
+      try {
+        const resp = await axios.get("https://program-sc.miguvideo.com/live/v2/tv-data/" + cates[cate].vomsID)
+        cates[cate].dataList = resp.data.body.dataList
+      } catch (error) {
+        cates[cate].dataList = [];
+      }
     }
 
     // 去除重复节目

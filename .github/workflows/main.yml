@@ -1,0 +1,37 @@
+version: '1.0'
+name: fetch
+displayName: fetch
+triggers:
+  trigger: auto
+  pr:
+    branches:
+      precise:
+        - main
+  schedule:
+    - cron: '0 */2 * * *'
+variables:
+  global:
+    - GITHUB_TOKEN
+stages:
+  - name: fetchurl
+    displayName: fetchurl
+    strategy: naturally
+    trigger: auto
+    steps:
+      - step: build@nodejs
+        name: fetchurl
+        displayName: fetchurl
+        nodeVersion: 21.5.0
+        commands:
+          - git clone https://x-access-token:${GITHUB_TOKEN}@github.com/xiaoyan-io/migu_video.git
+          - cd migu_video
+          - npm config set registry https://registry.npmmirror.com
+          - npm install && node fetchURLByAndroid720p.js
+          - git config user.name "GitHub Actions Bot"
+          - git config user.email "github-actions[bot]@users.noreply.github.com"
+          - git add .
+          - git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update: $(date +'%Y-%m-%d %H:%M:%S')"
+          - git push https://x-access-token:${GITHUB_TOKEN}@github.com/xiaoyan-io/migu_video.git main
+        strategy:
+          retry: '0'
+          timeout: 2
